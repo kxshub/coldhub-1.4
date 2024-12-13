@@ -1,0 +1,5811 @@
+using static System.Net.WebRequestMethods;
+
+local Library = loadstring(game: HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cold HuB Private v1.4", "LightTheme")
+
+--MAIN
+local Main = Window:NewTab("G3neral")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection: NewButton("Infinite Yield)", "basic", function()
+    loadstring(game: HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+
+local M4in = Window:NewTab("Rivals")
+local m4inSection = M4in:NewSection("KEY GUI")
+
+m4inSection: NewButton("rivals gui (NEEDS KEY)", "not tested yet", function()
+    loadstring(game: HttpGet('https://raw.githubusercontent.com/rybowe/rybowescripts/main/release.lua'))()
+end)
+
+
+local BSMAIN = Window:NewTab("PRISON LIFE")
+    local BSSection = BSMAIN:NewSection("GUI")
+
+
+BSSection: NewButton("Zephyr's OP GUI", "too op lmfao", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/Unknownlodfc/Zephyr/refs/heads/main/Zephyr%20%7C%20Prison%20Life"))()
+end)
+
+
+local ByMain = Window:NewTab("Bypasser")
+local BySection = ByMain:NewSection("chat fucker")
+
+
+BySection: NewButton("BetterBypasser", "pro tip: dont say anything sexual cuz you can get banned!!11!", function()
+    loadstring(game: HttpGetAsync("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua"))()
+end)
+
+
+BySection: NewButton("catbypasser v1.5", "other bypasser", function()
+loadstring(game: HttpGet("https://raw.githubusercontent.com/shadow62x/catbypass/main/upfix"))()
+end)
+
+
+local PMAIN = Window:NewTab("nigga")
+local PSection = PMAIN:NewSection("player")
+
+
+PSection: NewToggle("Spinbot (DOESNT GO OFF)", "just spinbot", function(state)
+    if state then
+        power = 250-- change this to make it more or less powerful
+
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power, 0, power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+else
+    power = 0-- change this to make it more or less powerful
+
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power, 0, power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    end
+end)
+
+
+
+PSection:NewToggle("God-Human", "Embrace The Power Of Gods", function(state)
+    if state then
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+else
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+
+PSection:NewToggle("Fly (FINALLY WORKS)", "FLYYYY", function(state)
+    if state then
+        loadstring(game: HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    else
+    print("Toggle Off")
+    end
+end)
+
+
+PSection:NewSlider("walkspeed again lmfao", "niggers smell", 500, 16, function(s)-- 500(MaxValue) | 16(MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+PSection: NewSlider("JumpPower", "SliderInfo", 500, 50, function(s)-- 500(MaxValue) | 50(MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+local Tab = Window:NewTab("Bots")
+local bSection = Tab:NewSection("sub 4 mrquistreal")
+
+
+bSection: NewButton("LunarBot", "ButtonInfo", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/probablYnicKxD/ProjectLunar/main/LunarBot/Source.lua"))()
+end)
+
+local Tab = Window:NewTab("nostalgia")
+local zSection = Tab:NewSection("all")
+
+zSection: NewButton("c00lkidd reborn v23", "embrace the power of c00lkidd", function()
+    loadstring(game: HttpGet("https://gist.githubusercontent.com/jointeamck/28a342b097091c2f0fac3f7ad03ff631/raw/b356a7e0cd1a9327098e73b6975977964106d78e/c00lgui%20v2.3%20deluxe", true))()
+end)
+
+local Tab = Window:NewTab("da hood")
+local lSection = Tab:NewSection("azure modded")
+
+BySection: NewLabel("these two fucked up for now")
+
+
+lSection: NewButton("no key!!1!", "take it and stfu", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+end)
+
+zSection: NewButton("1x1x1x1", "nn", function()
+    --[[
+    WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- Gui to Lua
+-- Version: 3.
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local e1x1x1x1Message = Instance.new("TextButton")
+local e1x1x1x1Music = Instance.new("TextButton")
+local e1x1x1x1Laugh = Instance.new("TextButton")
+local DayToNight = Instance.new("TextButton")
+local eggg = Instance.new("TextButton")
+local Epicpatched = Instance.new("TextButton")
+local Disc0 = Instance.new("TextButton")
+local e2006patched = Instance.new("TextButton")
+local ForceField = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.382171214, 0, 0.328530252, 0)
+Frame.Size = UDim2.new(0, 378, 0, 250)
+
+
+Name.Name = "Name"
+Name.Parent = Frame
+Name.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Name.Size = UDim2.new(0, 378, 0, 25)
+Name.Font = Enum.Font.GothamBold
+Name.Text = "1x1x1x1 Gui modded"
+Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Credits.Position = UDim2.new(0, 0, 0.912, 0)
+Credits.Size = UDim2.new(0, 378, 0, 22)
+Credits.Font = Enum.Font.GothamBold
+Credits.Text = "By Hidden"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+
+e1x1x1x1Message.Name = "e1x1x1x1Messagecilent"
+e1x1x1x1Message.Parent = Frame
+e1x1x1x1Message.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e1x1x1x1Message.Position = UDim2.new(0.0714285746, 0, 0.216000006, 0)
+e1x1x1x1Message.Size = UDim2.new(0, 79, 0, 31)
+e1x1x1x1Message.Font = Enum.Font.GothamBold
+e1x1x1x1Message.Text = "1x1x1x1 Message"
+e1x1x1x1Message.TextColor3 = Color3.fromRGB(0, 0, 0)
+e1x1x1x1Message.TextScaled = true
+e1x1x1x1Message.TextSize = 14.000
+e1x1x1x1Message.TextWrapped = true
+e1x1x1x1Message.MouseButton1Down:connect(function()
+while true do
+        wait(12)--set this to how much time between messages
+msg = Instance.new("Hint")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: MUHAWHAWHAW! NOOBS! I HAVE RETURNED FOR MY REVENGE!"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "h0lpkidd: HAHAAHAHHA YALL SO FUCKING DUMB"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: I WILL DESTROY YOU ALL! YOU ARE NIGGAS"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: YOU WILL NOT LIVE THROUGH MY DEADLY SPEARS"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: I MIGHT AS WELL CLONE YOU INTO MONKEYS"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: AND THEN THOSE NIGGAS WILL DESTROY ROBLOX! HAHAHAHAHA!"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: YOU CAN'T STOP ME! YOUR A WEAK BITCH!"
+wait(6)
+msg: remove()
+end
+end)
+e1x1x1x1Music.Name = "e1x1x1x1Music"
+e1x1x1x1Music.Parent = Frame
+e1x1x1x1Music.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e1x1x1x1Music.Position = UDim2.new(0.0714285746, 0, 0.436000019, 0)
+e1x1x1x1Music.Size = UDim2.new(0, 79, 0, 31)
+e1x1x1x1Music.Font = Enum.Font.GothamBold
+e1x1x1x1Music.Text = "1x1x1x1 Music"
+e1x1x1x1Music.TextColor3 = Color3.fromRGB(0, 0, 0)
+e1x1x1x1Music.TextScaled = true
+e1x1x1x1Music.TextSize = 14.000
+e1x1x1x1Music.TextWrapped = true
+e1x1x1x1Music.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=27697743"
+s.Volume = 9
+s.Pitch = 3
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+e1x1x1x1Laugh.Name = "e1x1x1x1Laugh"
+e1x1x1x1Laugh.Parent = Frame
+e1x1x1x1Laugh.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e1x1x1x1Laugh.Position = UDim2.new(0.0714285746, 0, 0.648000002, 0)
+e1x1x1x1Laugh.Size = UDim2.new(0, 79, 0, 34)
+e1x1x1x1Laugh.Font = Enum.Font.GothamBold
+e1x1x1x1Laugh.Text = "1x1x1x1 Laugh"
+e1x1x1x1Laugh.TextColor3 = Color3.fromRGB(0, 0, 0)
+e1x1x1x1Laugh.TextScaled = true
+e1x1x1x1Laugh.TextSize = 14.000
+e1x1x1x1Laugh.TextWrapped = true
+e1x1x1x1Laugh.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=35935204"
+s.Volume = 9
+s.Pitch = 0.9
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+DayToNight.Name = "DayToNight"
+DayToNight.Parent = Frame
+DayToNight.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+DayToNight.Position = UDim2.new(0.388888896, 0, 0.216000006, 0)
+DayToNight.Size = UDim2.new(0, 83, 0, 31)
+DayToNight.Font = Enum.Font.GothamBold
+DayToNight.Text = "Night"
+DayToNight.TextColor3 = Color3.fromRGB(0, 0, 0)
+DayToNight.TextScaled = true
+DayToNight.TextSize = 14.000
+DayToNight.TextWrapped = true
+DayToNight.MouseButton1Down:connect(function()
+while true do
+        print("Loop cycle start")
+game.Lighting.TimeOfDay = "18:00:00"
+wait(0.5)
+end
+end)
+e666.Name = "e666"
+e666.Parent = Frame
+e666.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e666.Position = UDim2.new(0.388888896, 0, 0.43599999, 0)
+e666.Size = UDim2.new(0, 83, 0, 31)
+e666.Font = Enum.Font.GothamBold
+e666.Text = "666"
+e666.TextColor3 = Color3.fromRGB(0, 0, 0)
+e666.TextScaled = true
+e666.TextSize = 14.000
+e666.TextWrapped = true
+e666.MouseButton1Down:connect(function()
+for i, v in next, workspace:children''do
+        if (v:IsA'BasePart')then
+me=v;
+bbg = Instance.new('BillboardGui', me);
+bbg.Name = 'stuf';
+bbg.Adornee = me;
+bbg.Size = UDim2.new(2.5, 0, 2.5, 0)
+--bbg.StudsOffset = Vector3.new(0, 2, 0)
+tlb = Instance.new'TextLabel';
+tlb.Text = '666 666 666 666 666 666';
+tlb.Font = 'SourceSansBold';
+tlb.FontSize = 'Size48';
+tlb.TextColor3 = Color3.new(1, 0, 0);
+tlb.Size = UDim2.new(1.25, 0, 1.25, 0);
+tlb.Position = UDim2.new(-0.125, -22, -1.1, 0);
+tlb.BackgroundTransparency = 1;
+tlb.Parent = bbg;
+end; end;
+function xds(dd)
+for i, v in next, dd:children''do
+        if (v:IsA'BasePart')then
+v.BrickColor=BrickColor.new'Really black';
+v.TopSurface = 'Smooth';
+v.BottomSurface = 'Smooth';
+s = Instance.new('SelectionBox', v);
+s.Adornee = v;
+s.Color = BrickColor.new'Really red';
+a = Instance.new('PointLight', v);
+a.Color = Color3.new(1, 0, 0);
+a.Range = 15;
+a.Brightness = 5;
+f = Instance.new('Fire', v);
+f.Size = 19;
+f.Heat = 22;
+end;
+game.Lighting.TimeOfDay = 0;
+game.Lighting.Brightness = 0;
+game.Lighting.ShadowColor = Color3.new(0, 0, 0);
+game.Lighting.Ambient = Color3.new(1, 0, 0);
+game.Lighting.FogEnd = 200;
+game.Lighting.FogColor = Color3.new(0, 0, 0);
+local dec = 'http://www.roblox.com/asset/?id=19399245';
+local fac = { 'Front', 'Back', 'Left', 'Right', 'Top', 'Bottom' }
+--coroutine.wrap(function()
+--for , _ in pairs(fac) do
+--local ddec = Instance.new("Decal", v)
+--ddec.Face =
+--ddec.Texture = dec
+--end end)()
+if #(v:GetChildren())>0 then
+xds(v)
+end
+end
+end
+xds(game.Workspace)
+end)
+EpicSaxGuy.Name = "EpicSaxGuy"
+EpicSaxGuy.Parent = Frame
+EpicSaxGuy.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+EpicSaxGuy.Position = UDim2.new(0.388888896, 0, 0.648000002, 0)
+EpicSaxGuy.Size = UDim2.new(0, 83, 0, 34)
+EpicSaxGuy.Font = Enum.Font.GothamBold
+EpicSaxGuy.Text = "Epic Sax Guy"
+EpicSaxGuy.TextColor3 = Color3.fromRGB(0, 0, 0)
+EpicSaxGuy.TextScaled = true
+EpicSaxGuy.TextSize = 14.000
+EpicSaxGuy.TextWrapped = true
+EpicSaxGuy.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=358776516"
+s.Volume = 1
+s.Pitch = 1
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+Disc0.Name = "Disc0"
+Disc0.Parent = Frame
+Disc0.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Disc0.Position = UDim2.new(0.693121672, 0, 0.216000006, 0)
+Disc0.Size = UDim2.new(0, 89, 0, 31)
+Disc0.Font = Enum.Font.GothamBold
+Disc0.Text = "Disco"
+Disc0.TextColor3 = Color3.fromRGB(0, 0, 0)
+Disc0.TextScaled = true
+Disc0.TextSize = 14.000
+Disc0.TextWrapped = true
+Disc0.MouseButton1Down:connect(function()
+while true do
+
+        game.Lighting.Ambient = Color3.new(math.random(), math.random(), math.random())
+wait(.25)
+
+
+end
+end)
+e2006Theme.Name = "e2006Theme"
+e2006Theme.Parent = Frame
+e2006Theme.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e2006Theme.Position = UDim2.new(0.693121672, 0, 0.43599999, 0)
+e2006Theme.Size = UDim2.new(0, 89, 0, 31)
+e2006Theme.Font = Enum.Font.GothamBold
+e2006Theme.Text = "2006 Music"
+e2006Theme.TextColor3 = Color3.fromRGB(0, 0, 0)
+e2006Theme.TextScaled = true
+e2006Theme.TextSize = 14.000
+e2006Theme.TextWrapped = true
+e2006Theme.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=1987072964"
+s.Volume = 1
+s.Pitch = 1
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+ForceField.Name = "ForceField"
+ForceField.Parent = Frame
+ForceField.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ForceField.Position = UDim2.new(0.693121672, 0, 0.648000002, 0)
+ForceField.Size = UDim2.new(0, 89, 0, 34)
+ForceField.Font = Enum.Font.GothamBold
+ForceField.Text = "FF"
+ForceField.TextColor3 = Color3.fromRGB(0, 0, 0)
+ForceField.TextScaled = true
+ForceField.TextSize = 14.000
+ForceField.TextWrapped = true
+ForceField.MouseButton1Down:connect(function()
+-- Gui to Lua
+-- Version: 3.
+-- Instances:
+
+local ForceFieldGUI = Instance.new("ScreenGui")
+local ForceFieldGUI_2 = Instance.new("TextButton")
+local ForceFieldOFF = Instance.new("TextButton")
+local ForceFieldON = Instance.new("TextButton")
+
+--Properties:
+
+ForceFieldGUI.Name = "ForceFieldGUI"
+ForceFieldGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+
+ForceFieldGUI_2.Name = "ForceFieldGUI"
+ForceFieldGUI_2.Parent = ForceFieldGUI
+ForceFieldGUI_2.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+ForceFieldGUI_2.BackgroundTransparency = 0.300
+ForceFieldGUI_2.BorderColor3 = Color3.fromRGB(245, 244, 247)
+ForceFieldGUI_2.BorderSizePixel = 0
+ForceFieldGUI_2.Position = UDim2.new(0, 0, 0, 240)
+ForceFieldGUI_2.Size = UDim2.new(0, 100, 0, 20)
+ForceFieldGUI_2.Text = "ForceField"
+ForceFieldGUI_2.TextColor3 = Color3.fromRGB(17, 17, 17)
+ForceFieldGUI_2.TextTransparency = 0.300
+
+
+ForceFieldOFF.Name = "ForceFieldOFF"
+ForceFieldOFF.Parent = ForceFieldGUI
+ForceFieldOFF.BackgroundColor3 = Color3.fromRGB(253, 253, 253)
+ForceFieldOFF.BackgroundTransparency = 0.300
+ForceFieldOFF.BorderColor3 = Color3.fromRGB(245, 244, 247)
+ForceFieldOFF.BorderSizePixel = 0
+ForceFieldOFF.Position = UDim2.new(0, 0, 0, 280)
+ForceFieldOFF.Size = UDim2.new(0, 100, 0, 20)
+ForceFieldOFF.Visible = false
+ForceFieldOFF.Text = "Off"
+ForceFieldOFF.TextColor3 = Color3.fromRGB(17, 17, 17)
+
+
+ForceFieldON.Name = "ForceFieldON"
+ForceFieldON.Parent = ForceFieldGUI
+ForceFieldON.BackgroundColor3 = Color3.fromRGB(253, 253, 253)
+ForceFieldON.BackgroundTransparency = 0.300
+ForceFieldON.BorderColor3 = Color3.fromRGB(245, 244, 247)
+ForceFieldON.BorderSizePixel = 0
+ForceFieldON.Position = UDim2.new(0, 0, 0, 260)
+ForceFieldON.Size = UDim2.new(0, 100, 0, 20)
+ForceFieldON.Visible = false
+ForceFieldON.Text = "On"
+ForceFieldON.TextColor3 = Color3.fromRGB(17, 17, 17)
+
+-- Scripts:
+
+local function DVAWVL_fake_script()-- ForceFieldGUI_2.Script
+local script = Instance.new('Script', ForceFieldGUI_2)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+script.Parent.Parent.ForceFieldOFF.Visible = true
+script.Parent.Parent.ForceFieldON.Visible = true
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(DVAWVL_fake_script)()
+local function HYECSMJ_fake_script() -- ForceFieldOFF.Script
+local script = Instance.new('Script', ForceFieldOFF)
+
+
+function onClicked(GUI)
+f = script.Parent.Parent.Parent.Parent.Character:findFirstChild("ForceField")
+if (f ~= nil) then
+f:remove()
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(HYECSMJ_fake_script)()
+local function LOYRXPU_fake_script() -- ForceFieldOFF.Script
+local script = Instance.new('Script', ForceFieldOFF)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+script.Parent.Parent.ForceFieldOFF.Visible = false
+script.Parent.Parent.ForceFieldON.Visible = false
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(LOYRXPU_fake_script)()
+local function PFEVNBW_fake_script() -- ForceFieldON.Script
+local script = Instance.new('Script', ForceFieldON)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+FF = Instance.new("ForceField")
+FF.Parent = script.Parent.Parent.Parent.Parent.Character
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(PFEVNBW_fake_script)()
+local function FNHQ_fake_script() -- ForceFieldON.Script
+local script = Instance.new('Script', ForceFieldON)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+script.Parent.Parent.ForceFieldOFF.Visible = false
+script.Parent.Parent.ForceFieldON.Visible = false
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(FNHQ_fake_script)()
+end)
+-- Scripts:
+ 
+local function QFCS_fake_script() -- Frame.Dragify
+local script = Instance.new('LocalScript', Frame)
+
+
+local UIS = game:GetService("UserInputService")
+function dragify(Frame)
+dragToggle = nil
+local dragSpeed = 0
+dragInput = nil
+dragStart = nil
+local dragPos = nil
+function updateInput(input)
+local Delta = input.Position - dragStart
+local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+game: GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), { Position = Position}):Play()
+end
+Frame.InputBegan:Connect(function(input)
+if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+dragToggle = true
+dragStart = input.Position
+startPos = Frame.Position
+input.Changed:Connect(function()
+if input.UserInputState == Enum.UserInputState.End then
+dragToggle = false
+end
+end)
+end
+end)
+Frame.InputChanged:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+dragInput = input
+end
+end)
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+if input == dragInput and dragToggle then
+updateInput(input)
+end
+end)
+end
+ 
+dragify(script.Parent)
+end
+coroutine.wrap(QFCS_fake_script)()
+end)
+
+PSection:NewButton("Clone FE", "spider", function()
+    --Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)--Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)--Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)--Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)
+end)
+
+PSection:NewButton("FE build", "miencart", function()
+    loadstring(game: HttpGet("https://ssbtools.netlify.app/assets/storage/LOADSTRING_SCRIPT2.txt"))()
+local Key = game:GetService("HttpService"):UrlEncode(game: HttpGet("https://pastebin.com/raw/3qMi3zNp"))
+wait()
+game: GetService("CoreGui").gui.Key.KeyBox.Text = Key
+wait()
+firesignal(game: GetService("CoreGui").gui.Key.KeyBox.CheckKey.MouseButton1Click)
+--[[
+    script made by UFOpilot#6075
+    the discord: https://discord.gg/Gf3jJym
+
+    key 1 unlocks the following methods
+    1.bodypos
+    2.bodypos + bodygyrp
+
+    key 2 unlocks all methods, but has all shrinkearn boxes enabled
+]]
+
+end)local Library = loadstring(game: HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cold HuB Private v1.2", "Midnight")
+
+--MAIN
+local Main = Window:NewTab("G3neral")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection: NewButton("Infinite Yield)", "basic", function()
+    loadstring(game: HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+
+local M4in = Window:NewTab("Rivals")
+local m4inSection = M4in:NewSection("KEY GUI")
+
+m4inSection: NewButton("rivals gui (NEEDS KEY)", "not tested yet", function()
+    loadstring(game: HttpGet('https://raw.githubusercontent.com/rybowe/rybowescripts/main/release.lua'))()
+end)
+
+
+local BSMAIN = Window:NewTab("PRISON LIFE")
+    local BSSection = BSMAIN:NewSection("GUI")
+
+
+BSSection: NewButton("Zephyr's OP GUI", "too op lmfao", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/Unknownlodfc/Zephyr/refs/heads/main/Zephyr%20%7C%20Prison%20Life"))()
+end)
+
+
+local ByMain = Window:NewTab("Bypasser")
+local BySection = ByMain:NewSection("chat fucker")
+
+
+BySection: NewButton("BetterBypasser", "pro tip: dont say anything sexual cuz you can get banned!!11!", function()
+    loadstring(game: HttpGetAsync("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua"))()
+end)
+
+
+BySection: NewButton("catbypasser v1.5", "other bypasser", function()
+loadstring(game: HttpGet("https://raw.githubusercontent.com/shadow62x/catbypass/main/upfix"))()
+end)
+
+
+local PMAIN = Window:NewTab("nigga")
+local PSection = PMAIN:NewSection("player")
+
+
+PSection: NewToggle("Spinbot (DOESNT GO OFF)", "just spinbot", function(state)
+    if state then
+        power = 250-- change this to make it more or less powerful
+
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power, 0, power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+else
+    power = 0-- change this to make it more or less powerful
+
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power, 0, power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    end
+end)
+
+
+
+PSection:NewToggle("God-Human", "Embrace The Power Of Gods", function(state)
+    if state then
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+else
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+
+PSection:NewToggle("Fly (FINALLY WORKS)", "FLYYYY", function(state)
+    if state then
+        loadstring(game: HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    else
+    print("Toggle Off")
+    end
+end)
+
+
+PSection:NewSlider("walkspeed again lmfao", "niggers smell", 500, 16, function(s)-- 500(MaxValue) | 16(MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+PSection: NewSlider("JumpPower", "SliderInfo", 500, 50, function(s)-- 500(MaxValue) | 50(MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+local Tab = Window:NewTab("Bots")
+local bSection = Tab:NewSection("sub 4 mrquistreal")
+
+
+bSection: NewButton("LunarBot", "ButtonInfo", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/probablYnicKxD/ProjectLunar/main/LunarBot/Source.lua"))()
+end)
+
+local Tab = Window:NewTab("nostalgia")
+local zSection = Tab:NewSection("all")
+
+zSection: NewButton("c00lkidd reborn v23", "embrace the power of c00lkidd", function()
+    loadstring(game: HttpGet("https://gist.githubusercontent.com/jointeamck/28a342b097091c2f0fac3f7ad03ff631/raw/b356a7e0cd1a9327098e73b6975977964106d78e/c00lgui%20v2.3%20deluxe", true))()
+end)
+
+local Tab = Window:NewTab("da hood")
+local lSection = Tab:NewSection("azure modded")
+
+BySection: NewLabel("these two fucked up for now")
+
+
+lSection: NewButton("no key!!1!", "take it and stfu", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+end)
+
+zSection: NewButton("1x1x1x1", "nn", function()
+    --[[
+    WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- Gui to Lua
+-- Version: 3.
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local e1x1x1x1Message = Instance.new("TextButton")
+local e1x1x1x1Music = Instance.new("TextButton")
+local e1x1x1x1Laugh = Instance.new("TextButton")
+local DayToNight = Instance.new("TextButton")
+local eggg = Instance.new("TextButton")
+local Epicpatched = Instance.new("TextButton")
+local Disc0 = Instance.new("TextButton")
+local e2006patched = Instance.new("TextButton")
+local ForceField = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.382171214, 0, 0.328530252, 0)
+Frame.Size = UDim2.new(0, 378, 0, 250)
+
+
+Name.Name = "Name"
+Name.Parent = Frame
+Name.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Name.Size = UDim2.new(0, 378, 0, 25)
+Name.Font = Enum.Font.GothamBold
+Name.Text = "1x1x1x1 Gui modded"
+Name.TextColor3 = Color3.fromRGB(0, 0, 0)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Credits.Position = UDim2.new(0, 0, 0.912, 0)
+Credits.Size = UDim2.new(0, 378, 0, 22)
+Credits.Font = Enum.Font.GothamBold
+Credits.Text = "By Hidden"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+
+e1x1x1x1Message.Name = "e1x1x1x1Messagecilent"
+e1x1x1x1Message.Parent = Frame
+e1x1x1x1Message.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e1x1x1x1Message.Position = UDim2.new(0.0714285746, 0, 0.216000006, 0)
+e1x1x1x1Message.Size = UDim2.new(0, 79, 0, 31)
+e1x1x1x1Message.Font = Enum.Font.GothamBold
+e1x1x1x1Message.Text = "1x1x1x1 Message"
+e1x1x1x1Message.TextColor3 = Color3.fromRGB(0, 0, 0)
+e1x1x1x1Message.TextScaled = true
+e1x1x1x1Message.TextSize = 14.000
+e1x1x1x1Message.TextWrapped = true
+e1x1x1x1Message.MouseButton1Down:connect(function()
+while true do
+        wait(12)--set this to how much time between messages
+msg = Instance.new("Hint")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: MUHAWHAWHAW! NOOBS! I HAVE RETURNED FOR MY REVENGE!"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "h0lpkidd: HAHAAHAHHA YALL SO FUCKING DUMB"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: I WILL DESTROY YOU ALL! YOU ARE NIGGAS"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: YOU WILL NOT LIVE THROUGH MY DEADLY SPEARS"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: I MIGHT AS WELL CLONE YOU INTO MONKEYS"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: AND THEN THOSE NIGGAS WILL DESTROY ROBLOX! HAHAHAHAHA!"
+wait(6)
+msg: remove()
+wait(3)
+msg = Instance.new("Message")
+msg.Parent = game.Workspace
+msg.Text = "1x1x1x1: YOU CAN'T STOP ME! YOUR A WEAK BITCH!"
+wait(6)
+msg: remove()
+end
+end)
+e1x1x1x1Music.Name = "e1x1x1x1Music"
+e1x1x1x1Music.Parent = Frame
+e1x1x1x1Music.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e1x1x1x1Music.Position = UDim2.new(0.0714285746, 0, 0.436000019, 0)
+e1x1x1x1Music.Size = UDim2.new(0, 79, 0, 31)
+e1x1x1x1Music.Font = Enum.Font.GothamBold
+e1x1x1x1Music.Text = "1x1x1x1 Music"
+e1x1x1x1Music.TextColor3 = Color3.fromRGB(0, 0, 0)
+e1x1x1x1Music.TextScaled = true
+e1x1x1x1Music.TextSize = 14.000
+e1x1x1x1Music.TextWrapped = true
+e1x1x1x1Music.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=27697743"
+s.Volume = 9
+s.Pitch = 3
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+e1x1x1x1Laugh.Name = "e1x1x1x1Laugh"
+e1x1x1x1Laugh.Parent = Frame
+e1x1x1x1Laugh.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e1x1x1x1Laugh.Position = UDim2.new(0.0714285746, 0, 0.648000002, 0)
+e1x1x1x1Laugh.Size = UDim2.new(0, 79, 0, 34)
+e1x1x1x1Laugh.Font = Enum.Font.GothamBold
+e1x1x1x1Laugh.Text = "1x1x1x1 Laugh"
+e1x1x1x1Laugh.TextColor3 = Color3.fromRGB(0, 0, 0)
+e1x1x1x1Laugh.TextScaled = true
+e1x1x1x1Laugh.TextSize = 14.000
+e1x1x1x1Laugh.TextWrapped = true
+e1x1x1x1Laugh.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=35935204"
+s.Volume = 9
+s.Pitch = 0.9
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+DayToNight.Name = "DayToNight"
+DayToNight.Parent = Frame
+DayToNight.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+DayToNight.Position = UDim2.new(0.388888896, 0, 0.216000006, 0)
+DayToNight.Size = UDim2.new(0, 83, 0, 31)
+DayToNight.Font = Enum.Font.GothamBold
+DayToNight.Text = "Night"
+DayToNight.TextColor3 = Color3.fromRGB(0, 0, 0)
+DayToNight.TextScaled = true
+DayToNight.TextSize = 14.000
+DayToNight.TextWrapped = true
+DayToNight.MouseButton1Down:connect(function()
+while true do
+        print("Loop cycle start")
+game.Lighting.TimeOfDay = "18:00:00"
+wait(0.5)
+end
+end)
+e666.Name = "e666"
+e666.Parent = Frame
+e666.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e666.Position = UDim2.new(0.388888896, 0, 0.43599999, 0)
+e666.Size = UDim2.new(0, 83, 0, 31)
+e666.Font = Enum.Font.GothamBold
+e666.Text = "666"
+e666.TextColor3 = Color3.fromRGB(0, 0, 0)
+e666.TextScaled = true
+e666.TextSize = 14.000
+e666.TextWrapped = true
+e666.MouseButton1Down:connect(function()
+for i, v in next, workspace:children''do
+        if (v:IsA'BasePart')then
+me=v;
+bbg = Instance.new('BillboardGui', me);
+bbg.Name = 'stuf';
+bbg.Adornee = me;
+bbg.Size = UDim2.new(2.5, 0, 2.5, 0)
+--bbg.StudsOffset = Vector3.new(0, 2, 0)
+tlb = Instance.new'TextLabel';
+tlb.Text = '666 666 666 666 666 666';
+tlb.Font = 'SourceSansBold';
+tlb.FontSize = 'Size48';
+tlb.TextColor3 = Color3.new(1, 0, 0);
+tlb.Size = UDim2.new(1.25, 0, 1.25, 0);
+tlb.Position = UDim2.new(-0.125, -22, -1.1, 0);
+tlb.BackgroundTransparency = 1;
+tlb.Parent = bbg;
+end; end;
+function xds(dd)
+for i, v in next, dd:children''do
+        if (v:IsA'BasePart')then
+v.BrickColor=BrickColor.new'Really black';
+v.TopSurface = 'Smooth';
+v.BottomSurface = 'Smooth';
+s = Instance.new('SelectionBox', v);
+s.Adornee = v;
+s.Color = BrickColor.new'Really red';
+a = Instance.new('PointLight', v);
+a.Color = Color3.new(1, 0, 0);
+a.Range = 15;
+a.Brightness = 5;
+f = Instance.new('Fire', v);
+f.Size = 19;
+f.Heat = 22;
+end;
+game.Lighting.TimeOfDay = 0;
+game.Lighting.Brightness = 0;
+game.Lighting.ShadowColor = Color3.new(0, 0, 0);
+game.Lighting.Ambient = Color3.new(1, 0, 0);
+game.Lighting.FogEnd = 200;
+game.Lighting.FogColor = Color3.new(0, 0, 0);
+local dec = 'http://www.roblox.com/asset/?id=19399245';
+local fac = { 'Front', 'Back', 'Left', 'Right', 'Top', 'Bottom' }
+--coroutine.wrap(function()
+--for , _ in pairs(fac) do
+--local ddec = Instance.new("Decal", v)
+--ddec.Face =
+--ddec.Texture = dec
+--end end)()
+if #(v:GetChildren())>0 then
+xds(v)
+end
+end
+end
+xds(game.Workspace)
+end)
+EpicSaxGuy.Name = "EpicSaxGuy"
+EpicSaxGuy.Parent = Frame
+EpicSaxGuy.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+EpicSaxGuy.Position = UDim2.new(0.388888896, 0, 0.648000002, 0)
+EpicSaxGuy.Size = UDim2.new(0, 83, 0, 34)
+EpicSaxGuy.Font = Enum.Font.GothamBold
+EpicSaxGuy.Text = "Epic Sax Guy"
+EpicSaxGuy.TextColor3 = Color3.fromRGB(0, 0, 0)
+EpicSaxGuy.TextScaled = true
+EpicSaxGuy.TextSize = 14.000
+EpicSaxGuy.TextWrapped = true
+EpicSaxGuy.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=358776516"
+s.Volume = 1
+s.Pitch = 1
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+Disc0.Name = "Disc0"
+Disc0.Parent = Frame
+Disc0.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Disc0.Position = UDim2.new(0.693121672, 0, 0.216000006, 0)
+Disc0.Size = UDim2.new(0, 89, 0, 31)
+Disc0.Font = Enum.Font.GothamBold
+Disc0.Text = "Disco"
+Disc0.TextColor3 = Color3.fromRGB(0, 0, 0)
+Disc0.TextScaled = true
+Disc0.TextSize = 14.000
+Disc0.TextWrapped = true
+Disc0.MouseButton1Down:connect(function()
+while true do
+
+        game.Lighting.Ambient = Color3.new(math.random(), math.random(), math.random())
+wait(.25)
+
+
+end
+end)
+e2006Theme.Name = "e2006Theme"
+e2006Theme.Parent = Frame
+e2006Theme.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+e2006Theme.Position = UDim2.new(0.693121672, 0, 0.43599999, 0)
+e2006Theme.Size = UDim2.new(0, 89, 0, 31)
+e2006Theme.Font = Enum.Font.GothamBold
+e2006Theme.Text = "2006 Music"
+e2006Theme.TextColor3 = Color3.fromRGB(0, 0, 0)
+e2006Theme.TextScaled = true
+e2006Theme.TextSize = 14.000
+e2006Theme.TextWrapped = true
+e2006Theme.MouseButton1Down:connect(function()
+--Made by Servano
+
+
+local s = Instance.new("Sound")
+
+
+s.Name = "Sound"
+s.SoundId = "http://www.roblox.com/asset/?id=1987072964"
+s.Volume = 1
+s.Pitch = 1
+s.Looped = true
+s.archivable = false
+
+
+s.Parent = game.Workspace
+
+
+wait(1)
+
+
+s: play()
+end)
+ForceField.Name = "ForceField"
+ForceField.Parent = Frame
+ForceField.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ForceField.Position = UDim2.new(0.693121672, 0, 0.648000002, 0)
+ForceField.Size = UDim2.new(0, 89, 0, 34)
+ForceField.Font = Enum.Font.GothamBold
+ForceField.Text = "FF"
+ForceField.TextColor3 = Color3.fromRGB(0, 0, 0)
+ForceField.TextScaled = true
+ForceField.TextSize = 14.000
+ForceField.TextWrapped = true
+ForceField.MouseButton1Down:connect(function()
+-- Gui to Lua
+-- Version: 3.
+-- Instances:
+
+local ForceFieldGUI = Instance.new("ScreenGui")
+local ForceFieldGUI_2 = Instance.new("TextButton")
+local ForceFieldOFF = Instance.new("TextButton")
+local ForceFieldON = Instance.new("TextButton")
+
+--Properties:
+
+ForceFieldGUI.Name = "ForceFieldGUI"
+ForceFieldGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+
+ForceFieldGUI_2.Name = "ForceFieldGUI"
+ForceFieldGUI_2.Parent = ForceFieldGUI
+ForceFieldGUI_2.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+ForceFieldGUI_2.BackgroundTransparency = 0.300
+ForceFieldGUI_2.BorderColor3 = Color3.fromRGB(245, 244, 247)
+ForceFieldGUI_2.BorderSizePixel = 0
+ForceFieldGUI_2.Position = UDim2.new(0, 0, 0, 240)
+ForceFieldGUI_2.Size = UDim2.new(0, 100, 0, 20)
+ForceFieldGUI_2.Text = "ForceField"
+ForceFieldGUI_2.TextColor3 = Color3.fromRGB(17, 17, 17)
+ForceFieldGUI_2.TextTransparency = 0.300
+
+
+ForceFieldOFF.Name = "ForceFieldOFF"
+ForceFieldOFF.Parent = ForceFieldGUI
+ForceFieldOFF.BackgroundColor3 = Color3.fromRGB(253, 253, 253)
+ForceFieldOFF.BackgroundTransparency = 0.300
+ForceFieldOFF.BorderColor3 = Color3.fromRGB(245, 244, 247)
+ForceFieldOFF.BorderSizePixel = 0
+ForceFieldOFF.Position = UDim2.new(0, 0, 0, 280)
+ForceFieldOFF.Size = UDim2.new(0, 100, 0, 20)
+ForceFieldOFF.Visible = false
+ForceFieldOFF.Text = "Off"
+ForceFieldOFF.TextColor3 = Color3.fromRGB(17, 17, 17)
+
+
+ForceFieldON.Name = "ForceFieldON"
+ForceFieldON.Parent = ForceFieldGUI
+ForceFieldON.BackgroundColor3 = Color3.fromRGB(253, 253, 253)
+ForceFieldON.BackgroundTransparency = 0.300
+ForceFieldON.BorderColor3 = Color3.fromRGB(245, 244, 247)
+ForceFieldON.BorderSizePixel = 0
+ForceFieldON.Position = UDim2.new(0, 0, 0, 260)
+ForceFieldON.Size = UDim2.new(0, 100, 0, 20)
+ForceFieldON.Visible = false
+ForceFieldON.Text = "On"
+ForceFieldON.TextColor3 = Color3.fromRGB(17, 17, 17)
+
+-- Scripts:
+
+local function DVAWVL_fake_script()-- ForceFieldGUI_2.Script
+local script = Instance.new('Script', ForceFieldGUI_2)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+script.Parent.Parent.ForceFieldOFF.Visible = true
+script.Parent.Parent.ForceFieldON.Visible = true
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(DVAWVL_fake_script)()
+local function HYECSMJ_fake_script() -- ForceFieldOFF.Script
+local script = Instance.new('Script', ForceFieldOFF)
+
+
+function onClicked(GUI)
+f = script.Parent.Parent.Parent.Parent.Character:findFirstChild("ForceField")
+if (f ~= nil) then
+f:remove()
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(HYECSMJ_fake_script)()
+local function LOYRXPU_fake_script() -- ForceFieldOFF.Script
+local script = Instance.new('Script', ForceFieldOFF)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+script.Parent.Parent.ForceFieldOFF.Visible = false
+script.Parent.Parent.ForceFieldON.Visible = false
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(LOYRXPU_fake_script)()
+local function PFEVNBW_fake_script() -- ForceFieldON.Script
+local script = Instance.new('Script', ForceFieldON)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+FF = Instance.new("ForceField")
+FF.Parent = script.Parent.Parent.Parent.Parent.Character
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(PFEVNBW_fake_script)()
+local function FNHQ_fake_script() -- ForceFieldON.Script
+local script = Instance.new('Script', ForceFieldON)
+
+
+function onClicked(GUI)
+h = script.Parent.Parent.Parent.Parent.Character:findFirstChild("Humanoid")
+if (h ~= nil) then
+script.Parent.Parent.ForceFieldOFF.Visible = false
+script.Parent.Parent.ForceFieldON.Visible = false
+else return end
+end
+script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(FNHQ_fake_script)()
+end)
+-- Scripts:
+ 
+local function QFCS_fake_script() -- Frame.Dragify
+local script = Instance.new('LocalScript', Frame)
+
+
+local UIS = game:GetService("UserInputService")
+function dragify(Frame)
+dragToggle = nil
+local dragSpeed = 0
+dragInput = nil
+dragStart = nil
+local dragPos = nil
+function updateInput(input)
+local Delta = input.Position - dragStart
+local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+game: GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), { Position = Position}):Play()
+end
+Frame.InputBegan:Connect(function(input)
+if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+dragToggle = true
+dragStart = input.Position
+startPos = Frame.Position
+input.Changed:Connect(function()
+if input.UserInputState == Enum.UserInputState.End then
+dragToggle = false
+end
+end)
+end
+end)
+Frame.InputChanged:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+dragInput = input
+end
+end)
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+if input == dragInput and dragToggle then
+updateInput(input)
+end
+end)
+end
+ 
+dragify(script.Parent)
+end
+coroutine.wrap(QFCS_fake_script)()
+end)
+
+PSection:NewButton("Clone FE", "spider", function()
+    --Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)--Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)--Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)--Made by : UNKNOWN
+setsimulationradius(math.huge, math.huge)
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+game.Players.LocalPlayer.Character.Archivable = true
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+local clonec =  game.Players.LocalPlayer.Character:Clone()
+clonec.Parent = workspace
+clonec.Name = "POOCLONE"
+clonec.Humanoid.HipHeight = -0.5
+game.Players.LocalPlayer.Character = clonec
+clonec.Animate.Disabled = false
+
+workspace.Camera.CameraSubject = clonec.Humanoid
+game.Players.LocalPlayer.Character = workspace[game.Players.LocalPlayer.Name]
+game.Players.LocalPlayer.Character.Animate.Disabled = true
+---game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Animator:Destroy()
+
+spawn(function()
+
+
+while true do
+if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+clonec.Humanoid.Jump = game.Players.LocalPlayer.Character.Humanoid.Jump
+
+local veco = workspace.Camera.CFrame:VectorToObjectSpace(game.Players.LocalPlayer.Character.Humanoid.MoveDirection)
+clonec.Humanoid:Move(veco, true)
+
+end
+wait()
+end
+
+end)
+
+for i,v in pairs(clonec:GetDescendants())do 
+    
+    if v:IsA("Part") then 
+    v.Transparency = 1
+    end 
+end 
+
+
+--Pavuk by diemiers#4209
+
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["HumanoidRootPart"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 0, 0)
+game:GetService("RunService").Stepped:connect(function()
+    
+    game.Players.LocalPlayer.Character.Torso.CanCollide = false 
+    game.Players.LocalPlayer.Character.Head.CanCollide = false 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false 
+       game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true  
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = (clonec.HumanoidRootPart.CFrame * CFrame.Angles(math.rad(-90),0,0)) * CFrame.new(0,-0,-1)
+           game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
+ 
+end)
+
+
+
+
+local segments = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments.Name = "segments"
+segments.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Transparency = 1
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments
+part.Name = "seg1"
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Cool yellow")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.992157, 0.917647, 0.552941)
+part_2.Parent = segments
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+
+local segments2 = Instance.new("Folder")
+local part = Instance.new("Part")
+local part_2 = Instance.new("Part")
+
+segments2.Name = "segments2"
+segments2.Parent = workspace
+part.Anchored = true
+part.CanCollide = false
+part.Size = Vector3.new(1, 1, 2)
+part.BottomSurface = Enum.SurfaceType.Smooth
+part.BrickColor = BrickColor.new("Alder")
+part.TopSurface = Enum.SurfaceType.Smooth
+part.Name = "seg1"
+part.Color = Color3.new(0.666667, 0.333333, 1)
+part.Parent = segments2
+part.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Anchored = true
+part_2.CanCollide = false
+part_2.Size = Vector3.new(1, 1, 2)
+part_2.BottomSurface = Enum.SurfaceType.Smooth
+part_2.BrickColor = BrickColor.new("Alder")
+part_2.TopSurface = Enum.SurfaceType.Smooth
+part_2.Color = Color3.new(0.666667, 0.333333, 1)
+part_2.Parent = segments2
+part_2.CFrame = CFrame.new(-4.1, 2.1, -37.5)
+part_2.Name = "seg2"
+part_2.Transparency = 1
+part.Transparency = 1
+
+
+
+local leg1 = Instance.new("Part")
+leg1.Anchored = true
+leg1.Size = Vector3.new(0.5, 0.2, 0.5)
+leg1.BottomSurface = Enum.SurfaceType.Smooth
+leg1.Color = Color3.new(0, 1, 0)
+leg1.BrickColor = BrickColor.new("New Yeller")
+leg1.TopSurface = Enum.SurfaceType.Smooth
+leg1.Name = "leg1"
+leg1.Parent = workspace
+leg1.CFrame = CFrame.new(-31.15, 0.1, 8.65)
+leg1.CanCollide = false
+leg1.Transparency = 1
+
+
+
+
+
+local leg1 =workspace.leg1:Clone()
+leg1.Parent = workspace
+
+local leg2= workspace.leg1:Clone()
+leg2.Parent = workspace
+
+local lp = game.Players.LocalPlayer
+local head = game.Players.LocalPlayer.Character.Head
+
+function coffset(x,y,z)
+	return (head.CFrame * CFrame.new(x,y,z)).Position
+end
+
+
+
+
+mouse.KeyDown:connect(function(k)
+	
+	if k == "z" then
+		
+		leg1.Position = mouse.Hit.Position
+	elseif k == "x" then
+		
+		
+		leg2.Position = mouse.Hit.Position
+	end
+	
+end)
+
+	
+
+		
+spawn(function()
+--
+while true do
+	
+	
+if game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude >0.1 then
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+		
+	local ray1 =Ray.new(coffset(3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray1,{leg1,leg2,lp.Character})
+	if pos then
+		leg1.Position = pos
+		end
+		
+
+	
+		wait(1.6/lp.Character.Humanoid.WalkSpeed)
+	local ray2 =Ray.new(coffset(-3,-0,0),Vector3.new(0,-10,0) )
+	local hit,pos = workspace:FindPartOnRayWithIgnoreList(ray2,{leg1,leg2,lp.Character})
+	if pos then
+	leg2.Position = pos	
+		end
+	
+	end
+	game:GetService("RunService").RenderStepped:wait()
+end
+
+end)
+
+
+  
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(1,-3,0)
+	
+	local offset = Vector3.new(1,-1,0)
+	
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments:GetChildren()) do
+	
+	
+	
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+	
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg1.Position
+			local vec = (pos2 - pos1).Unit 
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+
+
+spawn(function()
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+local len  = 2
+
+local offset = Vector3.new(-1,-1,0)
+
+local segs = {}
+
+local posn =  game.Players.LocalPlayer.Character.Head.Position + Vector3.new(0,-2.5,0)
+
+
+
+
+
+
+for i,v in pairs(workspace.segments2:GetChildren()) do
+	
+	
+
+	table.insert(segs,v)
+	
+	
+end
+
+
+
+
+
+function vectorabsy(vec)
+	local v = Vector3.new(vec.X,math.abs(vec.Y),vec.Z)
+	return v
+end
+
+
+local count = #segs
+
+
+while true do
+
+	for i = 1,5 do
+		
+	for i = 1,count do
+		
+		if i == 1 then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =leg2.Position
+			local vec = (pos2 - pos1).Unit 
+		
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position - (segs[i].CFrame.LookVector* (len/2) )
+			local pos2 = 	segs[i-1].Position - (segs[i-1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) 
+			
+			seg.CFrame = cframe
+		end
+
+	end	
+	
+	--Back
+
+	
+		for i = 1,count do
+		
+		local i = ( count - i ) + 1
+		if i == count then
+			
+			local seg = segs[i]
+			
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )  -- Calculating position that is on back of the part
+			local pos2 =(game.Players.LocalPlayer.Character.Head.CFrame * CFrame.new(offset)).Position  
+			local vec =(pos2 - pos1).Unit 
+			if vec.Y > 0 then
+				
+			vec = Vector3.new(vec.X, vec.Y-0.01 ,vec.Z)	
+				
+			end
+			
+			local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2) * CFrame.Angles(0,math.rad(-180),0) 
+			
+			seg.CFrame =cframe
+			
+		else
+				local seg = segs[i]
+			local pos1 = 	segs[i].Position + (segs[i].CFrame.LookVector* (len/2) )
+			
+			local pos2 = 	segs[i+1].Position + (segs[i+1].CFrame.LookVector* (len/2) )
+			local vec = (pos2 - pos1).Unit 
+			
+				local cframe = CFrame.new(pos2 - (vec*(len/2) ),pos2)  * CFrame.Angles(0,math.rad(-180),0)
+			
+			seg.CFrame = cframe
+		end
+
+		end	
+		
+	end
+	game:GetService("RunService").Heartbeat:wait()
+end
+	
+end)
+
+
+game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Right Hip"]:Destroy()
+game.Players.LocalPlayer.Character.Torso["Left Hip"]:Destroy()
+
+
+	
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Arm"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Left Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+local bodyvelocity = Instance.new("BodyVelocity",game.Players.LocalPlayer.Character["Right Leg"])
+bodyvelocity.MaxForce = Vector3.new(9.9999999805064e+18, 9.999999869911e+14, 9.999999869911e+14)
+bodyvelocity.Velocity = Vector3.new(0, 200, 0)
+
+spawn(function()
+	
+
+	game.Players.LocalPlayer.Character.Humanoid.Died:connect(function()
+		
+		segments:Destroy()
+		segments2:Destroy()
+		
+	end)
+	
+	game:GetService("RunService").Stepped:connect(function()
+	  	game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+	game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+
+	   end)
+	
+	repeat game:GetService("RunService").Heartbeat:wait()
+		
+	game.Players.LocalPlayer.Character["Right Arm"].CFrame = 	segments.seg1 .CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Arm"].CFrame = 	segments.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+		
+	 game.Players.LocalPlayer.Character["Right Leg"].CFrame = 	segments2.seg1.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	game.Players.LocalPlayer.Character["Left Leg"].CFrame = 	segments2.seg2.CFrame * CFrame.Angles(math.rad(90),0,0 )
+	
+	until game.Players.LocalPlayer.Character.Humanoid.Health  < 1
+
+		
+		
+		
+	
+	
+end)
+end)
+
+PSection:NewButton("FE build", "miencart", function()
+    loadstring(game: HttpGet("https://ssbtools.netlify.app/assets/storage/LOADSTRING_SCRIPT2.txt"))()
+local Key = game:GetService("HttpService"):UrlEncode(game: HttpGet("https://pastebin.com/raw/3qMi3zNp"))
+wait()
+game: GetService("CoreGui").gui.Key.KeyBox.Text = Key
+wait()
+firesignal(game: GetService("CoreGui").gui.Key.KeyBox.CheckKey.MouseButton1Click)
+--[[
+    script made by UFOpilot#6075
+    the discord: https://discord.gg/Gf3jJym
+
+    key 1 unlocks the following methods
+    1.bodypos
+    2.bodypos + bodygyrp
+
+    key 2 unlocks all methods, but has all shrinkearn boxes enabled
+]]
+
+end)
+
+local Tab = Window:NewTab("FISCH")
+local FishSection = Tab:NewSection("keyless")
+
+FishSection: NewButton(Hidden", "ez", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/tulontop/HiddenRevamp/refs/heads/main/Loader.luau"))()
+end)
+
+FishSection: NewButton("Alchemy Hub Cracked", "no key", function()
+    loadstring(game: HttpGet("https://scripts.alchemyhub.xyz"))())
+end)
+
+local FishSection = Tab:NewSection("non keyless")
+
+FishSection:NewButton("native top", "yeah", function()
+    (loadstring or load)(game: HttpGet("https://raw.githubusercontent.com/Native-lab/Native/main/loader.lua"))()
+end)
+
+MainSection: NewButton("FE trolling", "ButtonInfo", function()
+loadstring(game: HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/My-Telegram-Channel-SpiderScriptRB/refs/heads/main/Version%202.txt"))()
+end)
+
+local Tab = Window:NewTab("BrookHaven TROLLING")
+local BroSection = Tab:NewSection("with key sadly")
+
+BroSection: NewButton("YHUB", "xd", function()
+loadstring(game: HttpGet("https://raw.githubusercontent.com/Luarmor123/community-Y-HUB/refs/heads/main/YHUB%20ENGLISH"))()
+end)
+
+PSection: NewButton("Hitboxes", "ong this is so firee", function()
+    local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+-- Criar o ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "HitboxGUI"
+screenGui.ResetOnSpawn = false -- Persiste mesmo após respawn
+screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Criar o Frame principal
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 250, 0, 240)
+mainFrame.Position = UDim2.new(0.5, -125, 0.5, -120)
+mainFrame.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+mainFrame.Active = true
+mainFrame.Draggable = true -- Torna o GUI móvel
+mainFrame.Parent = screenGui
+
+-- Botão para minimizar o GUI
+local minimizeButton = Instance.new("TextButton")
+minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+minimizeButton.Position = UDim2.new(1, -35, 0, 5)
+minimizeButton.Text = "-"
+minimizeButton.BackgroundColor3 = Color3.new(0.5, 0.1, 0.1)
+minimizeButton.TextColor3 = Color3.new(1, 1, 1)
+minimizeButton.Parent = mainFrame
+
+-- Label do título
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, -40, 0, 30)
+titleLabel.Position = UDim2.new(0, 5, 0, 5)
+titleLabel.Text = "NPC HITBOX"
+titleLabel.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 16
+titleLabel.Parent = mainFrame
+
+-- Frame interno (conteúdo do GUI)
+local contentFrame = Instance.new("Frame")
+contentFrame.Size = UDim2.new(1, -10, 1, -40)
+contentFrame.Position = UDim2.new(0, 5, 0, 35)
+contentFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+contentFrame.Parent = mainFrame
+
+-- Criar o botão de ativar/desativar
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(1, -20, 0, 30)
+button.Position = UDim2.new(0, 10, 0, 10)
+button.Text = "Aumentar Hitbox de NPCs"
+button.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+button.TextColor3 = Color3.new(1, 1, 1)
+button.Parent = contentFrame
+
+-- Label de status
+local statusLabel = Instance.new("TextLabel")
+statusLabel.Size = UDim2.new(1, -20, 0, 30)
+statusLabel.Position = UDim2.new(0, 10, 0, 50)
+statusLabel.Text = "Status: Desativado"
+statusLabel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+statusLabel.TextColor3 = Color3.new(1, 1, 1)
+statusLabel.Parent = contentFrame
+
+-- Input para tamanho da hitbox
+local sizeInput = Instance.new("TextBox")
+sizeInput.Size = UDim2.new(1, -20, 0, 30)
+sizeInput.Position = UDim2.new(0, 10, 0, 90)
+sizeInput.Text = "Tamanho: 5"
+sizeInput.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+sizeInput.TextColor3 = Color3.new(1, 1, 1)
+sizeInput.Parent = contentFrame
+
+-- Checkbox para apenas cabeça
+local headOnlyCheckbox = Instance.new("TextButton")
+headOnlyCheckbox.Size = UDim2.new(1, -20, 0, 30)
+headOnlyCheckbox.Position = UDim2.new(0, 10, 0, 130)
+headOnlyCheckbox.Text = "Apenas Cabeça: Não"
+headOnlyCheckbox.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+headOnlyCheckbox.TextColor3 = Color3.new(1, 1, 1)
+headOnlyCheckbox.Parent = contentFrame
+
+-- Checkbox para colisão
+local noCollisionCheckbox = Instance.new("TextButton")
+noCollisionCheckbox.Size = UDim2.new(1, -20, 0, 30)
+noCollisionCheckbox.Position = UDim2.new(0, 10, 0, 170)
+noCollisionCheckbox.Text = "Sem Colisão: Não"
+noCollisionCheckbox.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+noCollisionCheckbox.TextColor3 = Color3.new(1, 1, 1)
+noCollisionCheckbox.Parent = contentFrame
+
+-- Variáveis de controle
+local isActive = false
+local headOnly = false
+local noCollision = false
+local defaultSize = Vector3.new(5, 5, 5)
+local npcOriginalSizes = {}
+
+-- Função para verificar se um objeto é um NPC
+local function isNPC(character)
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid and not Players:GetPlayerFromCharacter(character) then
+        return true
+    end
+    return false
+end
+
+-- Função para ajustar a hitbox de NPCs
+local function adjustNPCsHitbox()
+    local size = tonumber(sizeInput.Text:match("%d+")) or 5
+    local newSize = Vector3.new(size, size, size)
+
+    for _, object in ipairs(workspace:GetDescendants()) do
+        if object:IsA("BasePart") and object.Parent and isNPC(object.Parent) then
+            if not npcOriginalSizes[object] then
+                npcOriginalSizes[object] = object.Size
+            end
+
+            if headOnly then
+                if object.Name:lower() == "head" then
+                    object.Size = npcOriginalSizes[object] + newSize
+                    object.CanCollide = not noCollision
+                    object.Transparency = 0.5 -- Torna a hitbox visível para debug
+                else
+                    object.Size = npcOriginalSizes[object] -- Reseta o tamanho de outras partes
+                    object.CanCollide = true
+                    object.Transparency = 0
+                end
+            else
+                if object.Name:lower() == "head" then
+                    object.Size = npcOriginalSizes[object] -- Reseta o tamanho da cabeça
+                    object.CanCollide = true
+                    object.Transparency = 0
+                else
+                    object.Size = npcOriginalSizes[object] + newSize
+                    object.CanCollide = not noCollision
+                    object.Transparency = 0.5 -- Torna a hitbox visível para debug
+                end
+            end
+        end
+    end
+end
+
+-- Controle do botão principal
+button.MouseButton1Click:Connect(function()
+    isActive = not isActive
+    if isActive then
+        statusLabel.Text = "Status: Ativado"
+    else
+        statusLabel.Text = "Status: Desativado"
+        -- Reseta tamanhos originais ao desativar
+        for object, originalSize in pairs(npcOriginalSizes) do
+            if object:IsA("BasePart") then
+                object.Size = originalSize
+                object.Transparency = 0
+                object.CanCollide = true
+            end
+        end
+        npcOriginalSizes = {}
+    end
+end)
+
+-- Controle do checkbox "Apenas Cabeça"
+headOnlyCheckbox.MouseButton1Click:Connect(function()
+    headOnly = not headOnly
+    headOnlyCheckbox.Text = headOnly and "Apenas Cabeça: Sim" or "Apenas Cabeça: Não"
+end)
+
+-- Controle do checkbox "Sem Colisão"
+noCollisionCheckbox.MouseButton1Click:Connect(function()
+    noCollision = not noCollision
+    noCollisionCheckbox.Text = noCollision and "Sem Colisão: Sim" or "Sem Colisão: Não"
+end)
+
+-- Controle do botão de minimizar
+local isMinimized = false
+minimizeButton.MouseButton1Click:Connect(function()
+    isMinimized = not isMinimized
+    if isMinimized then
+        contentFrame.Visible = false
+        mainFrame.Size = UDim2.new(0, 250, 0, 40)
+    else
+        contentFrame.Visible = true
+        mainFrame.Size = UDim2.new(0, 250, 0, 240)
+    end
+    minimizeButton.Text = isMinimized and "+" or "-"
+end)
+
+-- Loop para monitorar NPCs
+RunService.Heartbeat:Connect(function()
+    if isActive then
+        adjustNPCsHitbox()
+    end
+end)local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+-- Criar o ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "HitboxGUI"
+screenGui.ResetOnSpawn = false -- Persiste mesmo após respawn
+screenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Criar o Frame principal
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 250, 0, 240)
+mainFrame.Position = UDim2.new(0.5, -125, 0.5, -120)
+mainFrame.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+mainFrame.Active = true
+mainFrame.Draggable = true -- Torna o GUI móvel
+mainFrame.Parent = screenGui
+
+-- Botão para minimizar o GUI
+local minimizeButton = Instance.new("TextButton")
+minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+minimizeButton.Position = UDim2.new(1, -35, 0, 5)
+minimizeButton.Text = "-"
+minimizeButton.BackgroundColor3 = Color3.new(0.5, 0.1, 0.1)
+minimizeButton.TextColor3 = Color3.new(1, 1, 1)
+minimizeButton.Parent = mainFrame
+
+-- Label do título
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, -40, 0, 30)
+titleLabel.Position = UDim2.new(0, 5, 0, 5)
+titleLabel.Text = "NPC HITBOX"
+titleLabel.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
+titleLabel.TextColor3 = Color3.new(1, 1, 1)
+titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 16
+titleLabel.Parent = mainFrame
+
+-- Frame interno (conteúdo do GUI)
+local contentFrame = Instance.new("Frame")
+contentFrame.Size = UDim2.new(1, -10, 1, -40)
+contentFrame.Position = UDim2.new(0, 5, 0, 35)
+contentFrame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+contentFrame.Parent = mainFrame
+
+-- Criar o botão de ativar/desativar
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(1, -20, 0, 30)
+button.Position = UDim2.new(0, 10, 0, 10)
+button.Text = "Aumentar Hitbox de NPCs"
+button.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+button.TextColor3 = Color3.new(1, 1, 1)
+button.Parent = contentFrame
+
+-- Label de status
+local statusLabel = Instance.new("TextLabel")
+statusLabel.Size = UDim2.new(1, -20, 0, 30)
+statusLabel.Position = UDim2.new(0, 10, 0, 50)
+statusLabel.Text = "Status: Desativado"
+statusLabel.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+statusLabel.TextColor3 = Color3.new(1, 1, 1)
+statusLabel.Parent = contentFrame
+
+-- Input para tamanho da hitbox
+local sizeInput = Instance.new("TextBox")
+sizeInput.Size = UDim2.new(1, -20, 0, 30)
+sizeInput.Position = UDim2.new(0, 10, 0, 90)
+sizeInput.Text = "Tamanho: 5"
+sizeInput.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+sizeInput.TextColor3 = Color3.new(1, 1, 1)
+sizeInput.Parent = contentFrame
+
+-- Checkbox para apenas cabeça
+local headOnlyCheckbox = Instance.new("TextButton")
+headOnlyCheckbox.Size = UDim2.new(1, -20, 0, 30)
+headOnlyCheckbox.Position = UDim2.new(0, 10, 0, 130)
+headOnlyCheckbox.Text = "Apenas Cabeça: Não"
+headOnlyCheckbox.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+headOnlyCheckbox.TextColor3 = Color3.new(1, 1, 1)
+headOnlyCheckbox.Parent = contentFrame
+
+-- Checkbox para colisão
+local noCollisionCheckbox = Instance.new("TextButton")
+noCollisionCheckbox.Size = UDim2.new(1, -20, 0, 30)
+noCollisionCheckbox.Position = UDim2.new(0, 10, 0, 170)
+noCollisionCheckbox.Text = "Sem Colisão: Não"
+noCollisionCheckbox.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+noCollisionCheckbox.TextColor3 = Color3.new(1, 1, 1)
+noCollisionCheckbox.Parent = contentFrame
+
+-- Variáveis de controle
+local isActive = false
+local headOnly = false
+local noCollision = false
+local defaultSize = Vector3.new(5, 5, 5)
+local npcOriginalSizes = {}
+
+-- Função para verificar se um objeto é um NPC
+local function isNPC(character)
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid and not Players:GetPlayerFromCharacter(character) then
+        return true
+    end
+    return false
+end
+
+-- Função para ajustar a hitbox de NPCs
+local function adjustNPCsHitbox()
+    local size = tonumber(sizeInput.Text:match("%d+")) or 5
+    local newSize = Vector3.new(size, size, size)
+
+    for _, object in ipairs(workspace:GetDescendants()) do
+        if object:IsA("BasePart") and object.Parent and isNPC(object.Parent) then
+            if not npcOriginalSizes[object] then
+                npcOriginalSizes[object] = object.Size
+            end
+
+            if headOnly then
+                if object.Name:lower() == "head" then
+                    object.Size = npcOriginalSizes[object] + newSize
+                    object.CanCollide = not noCollision
+                    object.Transparency = 0.5 -- Torna a hitbox visível para debug
+                else
+                    object.Size = npcOriginalSizes[object] -- Reseta o tamanho de outras partes
+                    object.CanCollide = true
+                    object.Transparency = 0
+                end
+            else
+                if object.Name:lower() == "head" then
+                    object.Size = npcOriginalSizes[object] -- Reseta o tamanho da cabeça
+                    object.CanCollide = true
+                    object.Transparency = 0
+                else
+                    object.Size = npcOriginalSizes[object] + newSize
+                    object.CanCollide = not noCollision
+                    object.Transparency = 0.5 -- Torna a hitbox visível para debug
+                end
+            end
+        end
+    end
+end
+
+-- Controle do botão principal
+button.MouseButton1Click:Connect(function()
+    isActive = not isActive
+    if isActive then
+        statusLabel.Text = "Status: Ativado"
+    else
+        statusLabel.Text = "Status: Desativado"
+        -- Reseta tamanhos originais ao desativar
+        for object, originalSize in pairs(npcOriginalSizes) do
+            if object:IsA("BasePart") then
+                object.Size = originalSize
+                object.Transparency = 0
+                object.CanCollide = true
+            end
+        end
+        npcOriginalSizes = {}
+    end
+end)
+
+-- Controle do checkbox "Apenas Cabeça"
+headOnlyCheckbox.MouseButton1Click:Connect(function()
+    headOnly = not headOnly
+    headOnlyCheckbox.Text = headOnly and "Apenas Cabeça: Sim" or "Apenas Cabeça: Não"
+end)
+
+-- Controle do checkbox "Sem Colisão"
+noCollisionCheckbox.MouseButton1Click:Connect(function()
+    noCollision = not noCollision
+    noCollisionCheckbox.Text = noCollision and "Sem Colisão: Sim" or "Sem Colisão: Não"
+end)
+
+-- Controle do botão de minimizar
+local isMinimized = false
+minimizeButton.MouseButton1Click:Connect(function()
+    isMinimized = not isMinimized
+    if isMinimized then
+        contentFrame.Visible = false
+        mainFrame.Size = UDim2.new(0, 250, 0, 40)
+    else
+        contentFrame.Visible = true
+        mainFrame.Size = UDim2.new(0, 250, 0, 240)
+    end
+    minimizeButton.Text = isMinimized and "+" or "-"
+end)
+
+-- Loop para monitorar NPCs
+RunService.Heartbeat:Connect(function()
+    if isActive then
+        adjustNPCsHitbox()
+    end
+end)
+end)
